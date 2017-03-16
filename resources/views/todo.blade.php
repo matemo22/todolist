@@ -12,7 +12,8 @@
 				<h1>ToDo List</h1>
 				<ul>
 					@foreach($todo as $td)
-					<li>{{ $td->item }}</li>
+					<!-- <li>{{ $td->item }} <button type="submit" class="btn btn-danger">x</button></li> -->
+					<li>{{ $td->item }} <a href="{{ url('postDelete',[$td->id_todo]) }} " class="btn btn-danger">x</a></li>
 					@endforeach
 				</ul>
 				<form action="todo" method="POST">
